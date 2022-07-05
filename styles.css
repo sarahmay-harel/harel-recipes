@@ -1,0 +1,262 @@
+/*
+todo
+1. swap out list of recipes on index.html and put in 3 up images with captions linking to recipe pages
+2. add media queries to update recipe-hero-image size on mobile
+3. fix li styling in footer & add Home link to footer nav
+4. update about us in footer
+5. stick footer to bottom
+6. sticky/scrolly nav
+7. remove old dropdown classses (introduced Bootstrap)
+8. make recipe page URLs consistent (dashes vs underscores)
+9. Add an active class to highlight the current page
+10. Add reeses, icebox cake, sweet potato recipes
+11. Add carousel to homepage hero and recipe sections
+*/
+
+/* Footer flexbox */
+
+/* html, body {
+  height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+} */
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+body {
+  /* display: flex;
+  flex-direction: column; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 2% 3%;
+    /* background-image: linear-gradient(to bottom right, rgba(145, 152, 229, .5), rgba(230, 100, 101, .5));
+    background-image: linear-gradient(to bottom right, rgba(185, 229, 145, .5), rgba(220, 95, 53, .5));
+    background-image: linear-gradient(to bottom, rgb(229 145 209 / 66%), rgb(220 95 53 / 63%)); */
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    margin: 1rem;
+  }
+}
+
+hr.hr {
+  border-top: lightgray;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: hotpink!important;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a {
+  color: black !important;
+}
+
+.navbar-toggler {
+  border: 0px;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  padding-right: 5px;
+}
+
+button:hover {
+  color: hotpink;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  color: hotpink;
+}
+
+/*Page content*/
+.hero {
+  padding: 2% 0 0 0;
+  text-align: center;
+  position: relative;
+}
+
+.hero-image {
+  height: auto;
+  width: 60%;
+  border-radius: 5%;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-image {
+    width: 300px;
+  }
+}
+
+figcaption {
+  font-size: .9em;
+}
+
+.recipe-hero-image {
+  height: auto;
+  width: 100%;
+  border-radius: 5%;
+  margin-top: 2%;
+}
+
+.hero-text {
+  margin: 0 20% 0 20%;
+}
+
+@media screen and (max-width: 561px) {
+  .hero-text {
+    margin: 0 10% 0 10%;
+  }
+}
+
+
+/*Recipe grid*/
+.recipe-grid {
+  /* margin: 0 10% 0 10%; */
+}
+
+figure {
+  text-align: center;
+}
+
+
+.img-small {
+  height: 250px;
+  width: 350px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .img-small {
+  width: 300px;
+  }
+}
+
+@media screen and (max-width: 825px) {
+  .img-small {
+  width: 175px;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .img-small {
+  width: 250px;
+  }
+}
+
+.recipe-img-small {
+  height: auto;
+  width: 75%;
+  border-radius: 5%;
+  margin-top: 2%;
+  display: none;
+}
+
+@media screen and (max-width: 490px) {
+  .recipe-img-small {
+    display: block;
+    width: 100%;
+  }
+}
+
+.recipe-grid figcaption {
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+
+
+
+/* Footer stuff*/
+
+footer {
+  padding: 5%;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+@media screen and (max-width: 561px) {
+  footer {
+    text-align: center;
+  }
+}
+
+.tiny {
+  max-width: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.category {
+  justify-content: center;
+}
+
+@media screen and (max-width:560px) {
+  .small-hide {
+    display: none;
+  }
+}
+
+/* carousel stuff */
+
+.carousel-item img {
+  margin: 0 auto;
+  border-radius: 5%;
+}
+
+.carousel-indicators li  {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
